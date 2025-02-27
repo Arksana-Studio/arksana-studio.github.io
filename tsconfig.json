@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+
     "target": "es5",
     "sourceMap": true,
     "lib": [
@@ -8,6 +9,36 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "src/",
+    "paths": {
+      "@/*": [
+        "*"
+      ],
+      "@configs/*": [
+        "configs/*"
+      ],
+      "@features/*": [
+        "features/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ]
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -33,5 +64,5 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ]
+  ],
 }
