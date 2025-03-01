@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import BackgroundBlurMesh from "../BackgroundBlurMesh";
-import { Button } from "../ui/button";
-import MovingLogo from "./MovingLogo";
+import BackgroundBlurMesh from "../../components/BackgroundBlurMesh";
+import { Button } from "../../components/ui/button";
+import MovingLogo from "../../components/home/MovingLogo";
 import { appConfig } from "../../configs/AppConfig";
+import LabelText from "../../components/LabelText";
+import { Button as GlassButton } from "../../components/home/GlassButton";
 
 const HeroSection = () => {
   const [init, setInit] = useState(false);
@@ -27,15 +29,14 @@ const HeroSection = () => {
     document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
   };
   const style = {
-    height: "48rem",
+    height: "47rem",
   };
   return (
     <div
-      className="hero-section relative flex h-screen w-full flex-col"
+      aria-label={"Home"}
+      className="hero-section relative flex w-full flex-col sections"
       id="hero-section"
     >
-      {/*Background mesh, particles, content stacking here
-       */}
       <div id={"particle"} className="grid">
         <div className={"absolute -z-30 w-full"}>
           <BackgroundBlurMesh></BackgroundBlurMesh>
@@ -49,50 +50,32 @@ const HeroSection = () => {
             />
           )}
         </div>
-        {/* Content */}
         <div
           id={"hero"}
           style={style}
-          className="z-15 container mx-auto flex max-w-3xl flex-col items-center justify-center text-center"
+          className="z-15 container mx-auto flex max-w-3xl flex-col items-center pt-40"
         >
-          <div className="card-glass flex items-center justify-center rounded-lg px-4 py-1 text-center">
-            <img
-              src="/logo/arksana_studio_logo.png"
-              className="m-1 mr-2 h-6 w-6"
-            />
-            <span className="text-xs text-white">
-              Arksana - Your Tech Solution Partner
-            </span>
-          </div>
+          <LabelText
+            text="Arksana - Your Tech Solution Partner"
+            image={"/logo/arksana_studio_logo.png"}
+          />
           <br></br>
-          <h1 className="text-5xl font-bold text-white">
+          <h1 className="mx-2 text-5xl font-bold text-white">
             Empowering Businesses with Smart Digital Solutions
           </h1>
-          <br></br>
-          <p className="max-w-sm text-xl opacity-80">
-            We create modern, fast, and user-friendly digital experiences
+          <p className="mx-2 mt-4 max-w-sm text-xl opacity-80">
+            Experience seamless, scalable technology tailored to drive your
+            success
           </p>
           <div className="my-8 flex gap-4">
-            <Button
-              onClick={() => window.open(appConfig.linkContact, "_blank")}
-            >
-              Let's Talk
-            </Button>
-            <Button
-              variant="outline"
-              onClick={() =>
-                document
-                  .getElementById("services")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
+            <Button onClick={onLetsChat}>Let's Talk</Button>
+            <GlassButton variant="outline" onClick={onSeeWhatWeDo}>
               See What We Do
-            </Button>
+            </GlassButton>
           </div>
           <MovingLogo />
         </div>
       </div>
-      <div className="relative z-10 flex h-full items-center justify-center"></div>
     </div>
   );
 };

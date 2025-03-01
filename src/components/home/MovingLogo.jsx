@@ -1,21 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
+import LabelText from "../LabelText";
 
 export default function MovingLogo() {
   const items = [
     { src: "/kotlin-logo/Kotlin Monochrome Logo White RGB.svg", delay: 0 },
     {
       src: "/nextjs-logo/dark-background/nextjs-logotype-dark-background.svg",
-      delay: 1.5,
+      delay: 3,
     },
-    { src: "/flutter/lockup_flutter_horizontal_solid.svg", delay: 3 },
+    { src: "/flutter/lockup_flutter_horizontal_solid.svg", delay: 6 },
   ];
 
   return (
     <div className="mt-4">
-      <div className="card-glass flex items-center justify-center rounded-lg px-4 py-1 text-center">
-        <span className="text-xs text-white">Tech we use</span>
-      </div>
+
+      <LabelText text={"Tech We Use"}/>
 
       <div className="flex h-24 w-full select-none flex-row items-center justify-center overflow-hidden">
         {items.map((item, index) => (
@@ -29,7 +29,7 @@ export default function MovingLogo() {
               scale: [0.75, 1, 1, 0.75],
             }}
             transition={{
-              duration: 5.6,
+              duration: 9,
               ease: "easeInOut",
               easings: [1, 0.3, 0.3, 1],
               repeat: Infinity,
