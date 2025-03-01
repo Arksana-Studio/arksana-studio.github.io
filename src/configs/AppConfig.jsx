@@ -6,4 +6,8 @@ export const appConfig = {
   address: "Jl Batas Pandang, Jalur 7, No. 10",
   city:"Pontianak Kota, Kalimantan Barat 78114",
   companyLegalName: "CV Khatulistiwa Solusi Teknologi",
+  socialMedia: {
+    instagram: "https://www.instagram.com/arksanastudio/",
+    tiktok: "https://www.tiktok.com/@arksanastudio",
+  },
 }

@@ -66,7 +66,7 @@ const Footer = () => {
             <div className="container mx-auto flex flex-row items-start justify-start pt-4">
               <div className="flex flex-row gap-6">
                 <a
-                  href="https://www.instagram.com/arksanastudio/"
+                  href={appConfig.socialMedia.instagram}
                   target="_blank"
                   className="inline-flex h-12 items-center gap-1 text-white"
                 >
@@ -74,7 +74,7 @@ const Footer = () => {
                   Instagram
                 </a>
                 <a
-                  href="https://www.tiktok.com/@arksanastudio"
+                  href={appConfig.socialMedia.tiktok}
                   target="_blank"
                   className="inline-flex items-center gap-2 text-white"
                 >
