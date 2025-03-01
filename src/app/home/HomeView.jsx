@@ -1,6 +1,7 @@
 import HeroSection from "./HeroSection";
 import AboutUsSection from "./AboutUsSection";
 import OurDevelopmentProcSection from "./OurDevelopmentProcSection";
+import ContactUs from "./ContactUs";
 
 const HomeView = () => {
   return (
@@ -10,6 +11,7 @@ const HomeView = () => {
       <HeroSection />
       <AboutUsSection />
       <OurDevelopmentProcSection/>
+      <ContactUs />
     </div>
   );
 };

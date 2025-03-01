@@ -26,10 +26,10 @@ const HeroSection = () => {
   };
 
   const onSeeWhatWeDo = () => {
-    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("process")?.scrollIntoView({ behavior: "smooth" });
   };
   const style = {
-    height: "47rem",
+    height: "40rem",
   };
   return (
     <div
@@ -57,7 +57,7 @@ const HeroSection = () => {
         >
           <LabelText
             text="Arksana - Your Tech Solution Partner"
-            image={"/logo/arksana_studio_logo.png"}
+            image={appConfig.logo}
           />
           <br></br>
           <h1 className="mx-2 text-5xl font-bold text-white">

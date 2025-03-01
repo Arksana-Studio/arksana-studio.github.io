@@ -31,18 +31,18 @@ const OurDevelopmentProcSection = () => {
       }
     >
       <LabelText text={"Our Development Process"} className={"align-top"} />
-      <div className={"flex max-w-2xl flex-col pt-4"}>
+      <div className={"flex max-w-2xl flex-col pt-4 text-center items-center justify-center"}>
         <span className={"mt-4 px-2 text-3xl font-bold"}>
           Your Idea, Our Expertise, One Seamless Development Path
         </span>
-        <span className={"max-w-42 my-4 text-muted-foreground"}>
+        <span className={"max-w-l my-4 text-muted-foreground text-center items-center justify-center"}>
           We transform concepts into high-quality digital solutions with a
           proven workflow.
         </span>
       </div>
       <div
         className={
-          "grid max-w-4xl grid-cols-1 md:grid-cols-3 place-content-center items-center justify-center gap-4"
+          "grid max-w-4xl grid-cols-1 md:grid-cols-3 place-content-center items-center justify-center gap-4 mt-8 mx-4"
         }
       >
         {/* For*/}

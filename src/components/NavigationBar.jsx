@@ -10,7 +10,7 @@ const NavigationBar = (className) => {
         className="flex flex-row card-glass bg-gray-800 p-1 rounded-lg items-center max-w-[1000] mx-auto">
 
         <div className={"flex items-center gap-2 flex-1"}>
-          <img src="/logo/arksana_studio_logo.png" alt="logo" className="w-8 h-8 ml-2"/>
+          <img src={appConfig.logo} alt="logo" className="w-8 h-8 ml-2"/>
           <h1 className="text-xl font-bold ml-2">{appConfig.title}</h1>
         </div>
 
@@ -23,7 +23,7 @@ const NavigationBar = (className) => {
 
         {/* WhatsApp Button */}
         <a href={appConfig.linkContact} target="_blank" rel="noopener noreferrer" className={"flex-1 flex justify-end"}>
-          <Button className="bg-slate-800 hover:bg-green-600 text-white px-4 py-2 rounded flex items-center">
+          <Button className="bg-slate-800 hover:bg-slate-600 text-white px-4 py-2 rounded flex items-center bg-opacity-64 border border-slate-600">
             <span className="mr-2">Chat with us</span><ChevronRight size={16}/>
           </Button>
         </a>

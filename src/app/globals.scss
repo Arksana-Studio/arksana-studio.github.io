@@ -15,6 +15,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+$slate: #0f172a;
+
+
+.bg-radial-gradient {
+  padding: 4rem;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

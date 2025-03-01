@@ -17,13 +17,13 @@ const Footer = () => {
   return (
     <div
       className={
-        "flex w-full flex-col items-center justify-center pt-12 text-center"
+        "flex w-full flex-col items-center justify-center text-center"
       }
     >
       {/* Stacking */}
       <div className={"relative w-full"}>
         <Separator />
-        <div className={"absolute -z-20 w-full"}>
+        <div className={"relative -z-20 w-full h-0"}>
           <BackgroundBlurMeshFooter className={"absolute -z-20"} />
         </div>
         <footer
@@ -40,7 +40,7 @@ const Footer = () => {
                 }
               >
                 <img
-                  src="/logo/arksana_studio_logo.png"
+                  src={appConfig.logo}
                   alt="Arksana Logo"
                   className="h-12 w-12 justify-center"
                 />
@@ -54,14 +54,14 @@ const Footer = () => {
               <a
                 href={appConfig.linkContact}
                 className="text-white underline hover:text-gray-300"
-                _target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 +{appConfig.phone}
               </a>
               <div className={"flex flex-row items-center space-x-4"}>
                 <a
                   href={"mailto:halo@arksana.my.id"}
-                  _target="_blank"
+                  target="_blank" rel="noopener noreferrer"
                   className={"text-white underline hover:text-gray-300"}
                 >
                   halo@arksana.my.id
@@ -118,7 +118,7 @@ const Footer = () => {
         </footer>
         <Separator />
         <footer className="p-4 py-8 pb-20 text-center text-white">
-          <p>&copy;2025 Arksana. All rights reserved.</p>
+          <p>&copy;{new Date().getFullYear()} Arksana. All rights reserved.</p>
         </footer>
       </div>
     </div>
