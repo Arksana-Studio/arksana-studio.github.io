@@ -1,5 +1,5 @@
 import HeroSection from "./HeroSection";
-import AboutUeSection from "./AboutUeSection";
+import AboutUsSection from "./AboutUsSection";
 import OurDevelopmentProcSection from "./OurDevelopmentProcSection";
 
 const HomeView = () => {
@@ -8,7 +8,7 @@ const HomeView = () => {
       className={"flex w-full flex-col items-center justify-center text-center"}
     >
       <HeroSection />
-      <AboutUeSection />
+      <AboutUsSection />
       <OurDevelopmentProcSection/>
     </div>
   );

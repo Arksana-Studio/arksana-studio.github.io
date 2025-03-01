@@ -16,8 +16,8 @@ const NavigationBar = (className) => {
 
         {/* Navigation Links */}
         <ul className="flex gap-6 list-none items-center flex-grow justify-center ml-2 mr-2 flex-2">
-          <li><a href="#process" className="hover:text-gray-400">Process</a></li>
           <li><a href="#about" className="hover:text-gray-400">About</a></li>
+          <li><a href="#process" className="hover:text-gray-400">Process</a></li>
           <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
         </ul>
 

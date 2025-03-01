@@ -1,8 +1,8 @@
 import LabelText from "../../components/LabelText";
 
-const AboutUeSection = () => {
+const AboutUsSection = () => {
   return (
-    <div className={"flex flex-col items-center justify-center min-h-52 sections"} aria-label={"About Us"} id={"about-us"}>
+    <div className={"flex flex-col items-center justify-center min-h-52 sections pt-2"} aria-label={"About Us"} id={"about"}>
       <LabelText text={"About Us Section"} />
       <h1 className={"flex text-xl md:text-3xl font-bold mx-auto max-w-3xl mt-2 p-4"}>
         We help businesses like yours build powerful, scalable, and
@@ -13,4 +13,4 @@ const AboutUeSection = () => {
   );
 };
 
-export default AboutUeSection;
+export default AboutUsSection;
