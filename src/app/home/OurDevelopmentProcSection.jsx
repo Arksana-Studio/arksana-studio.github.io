@@ -26,8 +26,9 @@ const OurDevelopmentProcSection = () => {
   return (
     <div
       id={"process"}
+      aria-label={"Process"}
       className={
-        "flex w-full flex-col place-content-center items-center justify-start pt-24 text-center"
+        "sections flex w-full flex-col place-content-center items-center justify-start pt-24 text-center"
       }
     >
       <LabelText text={"Our Development Process"} className={"align-top"} />

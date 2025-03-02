@@ -42,7 +42,7 @@ const Footer = () => {
                 <img
                   src={appConfig.logo}
                   alt="Arksana Logo"
-                  className="h-12 w-12 justify-center"
+                  className="w-8 h-8 md:h-12 md:w-12 justify-center"
                 />
                 <p className={"text-2xl font-bold"}>Arksana</p>
               </div>

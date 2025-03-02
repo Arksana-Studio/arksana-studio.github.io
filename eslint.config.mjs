@@ -1,6 +1,6 @@
-import {dirname} from "path";
-import {fileURLToPath} from "url";
-import {FlatCompat} from "@eslint/eslintrc";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc";
 import prettier from "eslint-config-prettier";
 import eslint from "@eslint/js";
 import parser from "@typescript-eslint/parser";
@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: __dirname
 });
 
 const eslintConfig = [
@@ -19,6 +19,11 @@ const eslintConfig = [
   {
     languageOptions: {
       parser
+    }
+  },
+  {
+    rules: {
+      "@next/next/no-img-element": "off"
     }
   }
 ];

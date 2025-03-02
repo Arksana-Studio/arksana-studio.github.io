@@ -4,7 +4,7 @@ const AboutUsSection = () => {
   return (
     <div
       className={
-        "sections flex min-h-52 flex-col items-center justify-center pt-24"
+        "sections flex min-h-96 flex-col items-center justify-center pt-24 m-24"
       }
       aria-label={"About Us"}
       id={"about"}

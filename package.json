@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "rm -rf out && next build && next export",
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out"
@@ -13,6 +13,7 @@
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-tooltip": "^1.1.8",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.8.1",
     "class-variance-authority": "^0.7.1",

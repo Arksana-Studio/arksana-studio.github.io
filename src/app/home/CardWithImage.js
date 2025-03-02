@@ -1,4 +1,4 @@
-const CardWithImage = ({ width, imgSrc, alt, data }) => {
+const CardWithImage = ({ data }) => {
   return (
     <div className={"card-glass p-2"}>
       <div className={"flex h-72 flex-col place-content-center items-center max-w-64"}>

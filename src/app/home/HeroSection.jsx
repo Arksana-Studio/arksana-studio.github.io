@@ -60,14 +60,14 @@ const HeroSection = () => {
             image={appConfig.logo}
           />
           <br></br>
-          <h1 className="mx-2 text-5xl font-bold text-white">
+          <h1 className="mx-2 text-4xl md:text-5xl font-bold text-white">
             Empowering Businesses with Smart Digital Solutions
           </h1>
           <p className="mx-2 mt-4 max-w-sm text-xl opacity-80">
             Experience seamless, scalable technology tailored to drive your
             success
           </p>
-          <div className="my-8 flex gap-4">
+          <div className="my-8 flex gap-4 flex-wrap justify-center">
             <Button onClick={onLetsChat}>Let's Talk</Button>
             <GlassButton variant="outline" onClick={onSeeWhatWeDo}>
               See What We Do
