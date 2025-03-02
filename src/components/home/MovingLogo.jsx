@@ -13,13 +13,12 @@ export default function MovingLogo() {
   ];
 
   return (
-    <div className="mt-4 w-full">
-      <LabelText text={"Tech We Use"} className={"place-self-center"}/>
-      <div className="flex h-24 select-none flex-row items-center justify-center overflow-hidden w-full">
+    <div className="mt-4 flex w-full flex-col">
+      <LabelText text={"Tech We Use"} className={"place-self-center"} />
+      <div className="flex h-24 w-full select-none flex-row items-center justify-center overflow-hidden">
         {items.map((item, index) => (
           <motion.div
             key={index}
-            className="overflow-hidden flex flex-row items-center max-w-full"
             initial={{ x: "-200%", opacity: 0 }}
             animate={{
               x: "200%",

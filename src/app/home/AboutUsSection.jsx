@@ -4,7 +4,7 @@ const AboutUsSection = () => {
   return (
     <div
       className={
-        "sections flex min-h-96 flex-col items-center justify-center pt-24 m-24"
+        "sections flex min-h-96 flex-col items-center justify-center pt-24 my-24"
       }
       aria-label={"About Us"}
       id={"about"}
@@ -12,7 +12,7 @@ const AboutUsSection = () => {
       <LabelText text={"About Us"} />
       <h1
         className={
-          "mx-auto mt-2 flex max-w-3xl p-4 text-xl font-bold md:text-3xl"
+          "mx-auto mt-2 flex max-w-3xl p-2 text-xl font-bold md:text-3xl"
         }
       >
         We help businesses like yours build powerful, scalable, and
