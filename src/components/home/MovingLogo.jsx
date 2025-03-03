@@ -13,28 +13,27 @@ export default function MovingLogo() {
   ];
 
   return (
-    <div className="mt-4 flex w-full flex-col">
+    <div className="mt-4 flex w-full flex-col items-center">
       <LabelText text={"Tech We Use"} className={"place-self-center"} />
-      <div className="flex h-24 w-full select-none flex-row items-center justify-center overflow-hidden">
+      <div className={""}>
         {items.map((item, index) => (
-          <motion.div
+          <motion.div className={"absolute -translate-x-1/2"}
             key={index}
-            initial={{ x: "-200%", opacity: 0 }}
+            initial={{ opacity: 0, x: "-200%", scale: 0.75, animationDelay: `${item.delay}s` }}
             animate={{
+              opacity: [0, 1, 1, 1, 0],
               x: "200%",
-              opacity: [0, 1, 1, 0],
               scale: [0.75, 1, 1, 0.75],
             }}
             transition={{
-              duration: 9,
-              ease: "easeInOut",
-              easings: [1, 0.3, 0.3, 1],
-              repeat: Infinity,
-              repeatType: "loop",
               delay: item.delay,
+              repeat: Infinity,
+              duration: 9,
+              easings: "easeInOut",
+              repeatType: "loop",
             }}
           >
-            <img src={item.src} alt="Logo" className="h-24 w-24" />
+            <img src={items[index].src} alt="Logo" className="h-24 w-24" />
           </motion.div>
         ))}
       </div>
