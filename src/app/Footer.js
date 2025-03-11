@@ -21,11 +21,8 @@ const Footer = () => {
       }
     >
       {/* Stacking */}
-      <div className={"relative w-full"}>
+      <div className={"relative w-full background-blur"}>
         <Separator />
-        <div className={"relative -z-20 w-full h-0"}>
-          <BackgroundBlurMeshFooter className={"absolute -z-20"} />
-        </div>
         <footer
           className={
             "max-w-5xl px-12 py-12 w-full justify-between place-self-center flex md:flex-row flex-col gap-8"

@@ -94,7 +94,6 @@ $slate: #0f172a;
 }
 
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -134,12 +133,22 @@ $slate: #0f172a;
 }
 
 
-
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.background-blur {
+  background: url('/background-blur.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.background-blur-center {
+  background: url('/background-blur-center.svg') no-repeat center center;
+  background-size: cover;
 }

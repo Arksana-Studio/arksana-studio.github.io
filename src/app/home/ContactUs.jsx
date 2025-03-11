@@ -7,12 +7,9 @@ import MiddleBlur from "./MiddleBlur";
 
 const ContactUs = () => {
   return (
-    <div className={"sections relative flex flex-col items-center justify-center w-full min-h-96 m-24"} id={"contact"}
+    <div className={"sections relative flex flex-col items-center justify-center w-full min-h-96 py-24 background-blur-center"} id={"contact"}
          aria-label={"Contact Us"}
     >
-      <div className={"w-full absolute -z-20 -translate-y-1"}>
-        <MiddleBlur/>
-      </div>
       <div
         className={"my-24 flex flex-col items-center justify-center text-center"}
       >
@@ -23,7 +20,7 @@ const ContactUs = () => {
         <span className={"text-xl pt-4 text-muted-foreground"}>We are ready to help you anytime</span>
         <div className={"mt-8 flex flex-col items-center justify-center gap-2"}>
           <Button
-            className={"button" }
+            className={"button"}
             onClick={() => window.open(appConfig.linkContact, "_blank")}
           >
             Contact Us

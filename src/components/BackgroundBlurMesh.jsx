@@ -45,4 +45,3 @@ const BackgroundBlurMesh = (className) => {
   );
 };
 
-export default BackgroundBlurMesh;

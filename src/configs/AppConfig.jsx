@@ -1,4 +1,3 @@
-// 6285240000000 -> 62 852-4000-0000
 const phoneNumberPrettier = (phoneNumber) => {
   const phone = phoneNumber.replace(/\D/g, '');
   const match = phone.match(/^(\d{2})(\d{4})(\d{4})(\d{4})$/);

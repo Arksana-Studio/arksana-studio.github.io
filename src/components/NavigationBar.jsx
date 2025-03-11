@@ -26,16 +26,11 @@ const NavigationBar = (className) => {
       return;
     }
 
-    if (section === "contact") {
-      window.open(appConfig.linkContact, "_blank");
-      return;
-    }
-
     document.getElementById(section)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-  };
+  }
 
   const navigationLinksHtml = `  
       <li>
@@ -124,19 +119,13 @@ const NavigationBar = (className) => {
           {/* Navigation Links */}
           <ul className="flex-2 ml-2 mr-2 hidden flex-grow list-none items-center justify-center gap-6 md:flex">
             <li>
-              <a href="#about" className="hover:text-gray-400">
-                About
-              </a>
+              <button className="hover:text-gray-400" onClick={onNavClick("about")}>About</button>
             </li>
             <li>
-              <a href="#process" className="hover:text-gray-400">
-                Process
-              </a>
+              <button className="hover:text-gray-400" onClick={onNavClick("process")}>Process</button>
             </li>
             <li>
-              <a href="#contact" className="hover:text-gray-400">
-                Contact
-              </a>
+              <button className="hover:text-gray-400" onClick={onNavClick("contact")}>Contact</button>
             </li>
           </ul>
 

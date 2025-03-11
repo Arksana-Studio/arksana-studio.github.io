@@ -1,14 +1,15 @@
 "use client";
 
-const BackgroundBlurMesh = (className) => {
+const BackgroundBlurMeshFooter = ({ className }) => {
   return (
-    <div className={""}>
+    <div className={className}>
       <svg
         className={"w-full h-96"}
-        xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         viewBox="0 0 800 450"
-        preserveAspectRatio="none"
+        id="bbblurry"
+        opacity="1"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <filter
@@ -61,4 +62,4 @@ const BackgroundBlurMesh = (className) => {
   );
 };
 
-export default BackgroundBlurMesh;
+export default BackgroundBlurMeshFooter;

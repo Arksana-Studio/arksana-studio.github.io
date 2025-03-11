@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import BackgroundBlurMesh from "../../components/BackgroundBlurMesh";
 import { Button } from "../../components/ui/button";
 import MovingLogo from "../../components/home/MovingLogo";
 import { appConfig } from "../../configs/AppConfig";
@@ -38,8 +37,7 @@ const HeroSection = () => {
       id="hero-section"
     >
       <div id={"particle"} className="grid">
-        <div className={"absolute -z-30 w-full"}>
-          <BackgroundBlurMesh></BackgroundBlurMesh>
+        <div className={"absolute -z-30 w-full background-blur min-h-[60rem]"}>
         </div>
         <div className={"absolute -z-20 w-full"}>
           {init && (
