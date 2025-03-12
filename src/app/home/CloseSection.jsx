@@ -7,9 +7,7 @@ import MiddleBlur from "./MiddleBlur";
 
 const CloseSection = () => {
   return (
-    <div className={"sections relative flex flex-col items-center justify-center w-full min-h-96 py-24 background-blur-center"} id={"contact"}
-         aria-label={"Let's Talk"}
-    >
+    <div className={"relative flex flex-col items-center justify-center w-full min-h-96 py-24 background-blur-center"} id={"close-section"} aria-label={"Let's Talk"}>
       <div
         className={"my-24 flex flex-col items-center justify-center text-center"}
       >

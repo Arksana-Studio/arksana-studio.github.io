@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import LabelText from "../../components/LabelText";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { appConfig } from "../../configs/AppConfig";
 
 export default function ContactUsSection() {
@@ -16,12 +16,9 @@ export default function ContactUsSection() {
   useEffect(() => {
     const loadTurnstile = () => {
       if (window.turnstile) {
-        console.log(appConfig);
         window.turnstile.render(turnstileRef.current, {
           sitekey: `${appConfig.cfSiteKey}`,
           callback: (token) => {
-            console.log("siteKey", appConfig.cfSiteKey);
-            console.log("cfToken", token);
             setCfToken(token);
           },
         });
@@ -32,14 +29,14 @@ export default function ContactUsSection() {
 
     if (!window.turnstile) {
       const script = document.createElement("script");
-      script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.src =
+        "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
       script.async = true;
       script.onload = loadTurnstile;
       document.body.appendChild(script);
     } else {
       loadTurnstile();
     }
-
   }, []);
 
   const handleChange = (e) => {
@@ -84,8 +81,9 @@ export default function ContactUsSection() {
   return (
     <div
       className={
-        "contact-us-section sections background-blur-center py-48 md:text-start"
+        "contact-us-section sections background-blur-center sections py-48 md:text-start"
       }
+      id={"contact"}
       aria-label={"Contact Us"}
     >
       <LabelText text={"Contacts"} />
@@ -139,7 +137,7 @@ export default function ContactUsSection() {
             <Button className="w-full" type="submit" disabled={loading}>
               {loading ? "Submitting..." : "Submit"}
             </Button>
-            { (
+            {
               <p
                 className={
                   "text-sm text-white " +
@@ -148,7 +146,7 @@ export default function ContactUsSection() {
               >
                 {status}
               </p>
-            )}
+            }
           </form>
         </div>
       </div>
