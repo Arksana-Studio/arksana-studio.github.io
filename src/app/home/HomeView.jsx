@@ -1,7 +1,8 @@
 import HeroSection from "./HeroSection";
 import AboutUsSection from "./AboutUsSection";
 import OurDevelopmentProcSection from "./OurDevelopmentProcSection";
-import ContactUs from "./ContactUs";
+import CloseSection from "./CloseSection";
+import ContactUsSection from "./ContactUsSection";
 
 const HomeView = () => {
   return (
@@ -11,7 +12,8 @@ const HomeView = () => {
       <HeroSection />
       <AboutUsSection />
       <OurDevelopmentProcSection/>
-      <ContactUs />
+      <ContactUsSection />
+      <CloseSection />
     </div>
   );
 };

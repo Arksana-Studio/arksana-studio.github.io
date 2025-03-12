@@ -5,10 +5,10 @@ import { appConfig } from "../../configs/AppConfig";
 import { Button } from "../../components/ui/button";
 import MiddleBlur from "./MiddleBlur";
 
-const ContactUs = () => {
+const CloseSection = () => {
   return (
     <div className={"sections relative flex flex-col items-center justify-center w-full min-h-96 py-24 background-blur-center"} id={"contact"}
-         aria-label={"Contact Us"}
+         aria-label={"Let's Talk"}
     >
       <div
         className={"my-24 flex flex-col items-center justify-center text-center"}
@@ -34,4 +34,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default CloseSection;

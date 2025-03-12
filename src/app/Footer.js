@@ -3,7 +3,6 @@ import { Separator } from "../components/ui/separator";
 import { appConfig } from "../configs/AppConfig";
 import { useEffect, useState } from "react";
 import { Instagram } from "lucide-react";
-import BackgroundBlurMeshFooter from "../components/BackgroundBlurMeshFooter";
 
 const Footer = () => {
   const [sections, setSections] = useState([]);
