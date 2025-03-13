@@ -88,13 +88,12 @@ export default function ContactUsSection() {
     >
       <LabelText text={"Contacts"} />
       <div className="flex flex-col items-center justify-center px-6 text-white md:flex-row md:px-12">
-        <div className="space-y-4 pt-8 md:w-1/2 md:pt-0">
+        <div className="space-y-4 pt-8 md:w-1/2 md:pt-0 max-w-xl">
           <h2 className="text-4xl font-bold">Let's Connect!</h2>
           <p className="text-xl text-gray-200">
             Have questions or need assistance? We’re here to help. Get in touch
             with us today!
           </p>
-          <div className="space-y-3 text-gray-300"></div>
         </div>
 
         <div className="mt-6 w-full max-w-lg rounded-lg p-6 text-start shadow-lg md:ml-12 md:mt-0 md:w-1/2">
@@ -124,6 +123,8 @@ export default function ContactUsSection() {
             <div>
               <label className="mb-2 block text-sm">Message</label>
               <Textarea
+                maxLength={255}
+                minLength={10}
                 name="message"
                 placeholder="Hi, I am reaching out for..."
                 value={form.message}

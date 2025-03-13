@@ -15,16 +15,14 @@ const Footer = () => {
   }, []);
   return (
     <div
-      className={
-        "flex w-full flex-col items-center justify-center text-center"
-      }
+      className={"flex w-full flex-col items-center justify-center text-center"}
     >
       {/* Stacking */}
-      <div className={"relative w-full background-blur"}>
+      <div className={"background-blur relative w-full"}>
         <Separator />
         <footer
           className={
-            "max-w-5xl px-12 py-12 w-full justify-between place-self-center flex md:flex-row flex-col gap-8"
+            "flex w-full max-w-5xl flex-col justify-between gap-8 place-self-center px-12 py-12 md:flex-row"
           }
         >
           {/* About */}
@@ -38,7 +36,7 @@ const Footer = () => {
                 <img
                   src={appConfig.logo}
                   alt="Arksana Logo"
-                  className="w-8 h-8 md:h-12 md:w-12 justify-center"
+                  className="h-8 w-8 justify-center md:h-12 md:w-12"
                 />
                 <p className={"text-2xl font-bold"}>Arksana</p>
               </div>
@@ -50,14 +48,16 @@ const Footer = () => {
               <a
                 href={appConfig.linkContact}
                 className="text-white underline hover:text-gray-300"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 +{appConfig.phone}
               </a>
               <div className={"flex flex-row items-center space-x-4"}>
                 <a
                   href={"mailto:halo@arksana.my.id"}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={"text-white underline hover:text-gray-300"}
                 >
                   halo@arksana.my.id
@@ -66,9 +66,9 @@ const Footer = () => {
             </div>
           </div>
           {/* Sosmed */}
-          <div className={"flex flex-col items-start place-items-center"}>
+          <div className={"flex flex-col place-items-center items-start"}>
             <div className="container mx-auto flex flex-col items-start justify-start">
-              <div className="flex flex-col -translate-x-4">
+              <div className="flex -translate-x-4 flex-col">
                 <span className="pb-4 pl-4 text-xl font-bold text-white">
                   Follow Us
                 </span>
@@ -96,7 +96,9 @@ const Footer = () => {
           </div>
           {/* Quick Links */}
           <div className={"flex-col justify-start"}>
-            <p className={"text-lg font-bold text-white text-left"}>Quick Links</p>
+            <p className={"text-left text-lg font-bold text-white"}>
+              Quick Links
+            </p>
             <div
               className={"flex flex-col items-start justify-start gap-2 py-4"}
             >
