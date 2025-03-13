@@ -56,12 +56,12 @@ export default function ContactUsSection() {
   return (
     <div
       className={
-        "contact-us-section sections background-blur-center sections py-48 md:text-start"
+        "contact-us-section sections background-blur-center sections py-48 md:text-start items-center justify-start text-center flex md:block flex-col"
       }
       id={"contact"}
       aria-label={"Contact Us"}
     >
-      <LabelText text={"Contacts"} />
+      <LabelText text={"Contacts"} className={"text-center"} />
       <div className="flex flex-col items-center justify-center text-white md:flex-row md:px-12">
         <div className="space-y-4 px-6 pt-8 md:w-1/2 md:pt-0">
           <h2 className="text-4xl font-bold">Let's Connect!</h2>

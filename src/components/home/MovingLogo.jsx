@@ -13,9 +13,9 @@ export default function MovingLogo() {
   ];
 
   return (
-    <div className="mt-4 flex w-full flex-col items-center overflow-hidden">
+    <div className="mt-4 flex w-full flex-col items-center">
       <LabelText text={"Tech We Use"} className={"place-self-center"} />
-      <div className="relative h-20 w-full overflow-hidden">
+      <div className="relative h-20 w-full">
         <div className="absolute flex h-20 w-full items-center justify-center">
           {items.map((item, index) => (
             <motion.div
