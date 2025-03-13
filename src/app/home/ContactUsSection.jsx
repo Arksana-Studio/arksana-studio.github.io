@@ -5,39 +5,14 @@ import { Button } from "@/components/ui/button";
 import LabelText from "../../components/LabelText";
 import { useEffect, useRef, useState } from "react";
 import { appConfig } from "../../configs/AppConfig";
+import Turnstile, { useTurnstile } from "react-turnstile";
 
 export default function ContactUsSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [cfToken, setCfToken] = useState("");
-  const turnstileRef = useRef(null);
-
-  useEffect(() => {
-    const loadTurnstile = () => {
-      if (window.turnstile) {
-        window.turnstile.render(turnstileRef.current, {
-          sitekey: `${appConfig.cfSiteKey}`,
-          callback: (token) => {
-            setCfToken(token);
-          },
-        });
-      } else {
-        setTimeout(loadTurnstile, 500);
-      }
-    };
-
-    if (!window.turnstile) {
-      const script = document.createElement("script");
-      script.src =
-        "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-      script.async = true;
-      script.onload = loadTurnstile;
-      document.body.appendChild(script);
-    } else {
-      loadTurnstile();
-    }
-  }, []);
+  const turnstile = useTurnstile();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -87,18 +62,29 @@ export default function ContactUsSection() {
       aria-label={"Contact Us"}
     >
       <LabelText text={"Contacts"} />
-      <div className="flex flex-col items-center justify-center px-6 text-white md:flex-row md:px-12">
-        <div className="space-y-4 pt-8 md:w-1/2 md:pt-0 max-w-xl">
+      <div className="flex flex-col items-center justify-center text-white md:flex-row md:px-12">
+        <div className="space-y-4 px-6 pt-8 md:w-1/2 md:pt-0">
           <h2 className="text-4xl font-bold">Let's Connect!</h2>
-          <p className="text-xl text-gray-200">
+          <p className="px-2 text-xl text-gray-200">
             Have questions or need assistance? We’re here to help. Get in touch
             with us today!
           </p>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8176432980345!2d109.300157411009!3d-0.033378735540873394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d5964a009d6e9%3A0x4228b973c657ada6!2sArksana%20Studio!5e0!3m2!1sen!2sid!4v1741878519818!5m2!1sen!2sid"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
 
-        <div className="mt-6 w-full max-w-lg rounded-lg p-6 text-start shadow-lg md:ml-12 md:mt-0 md:w-1/2">
+        <div className="mt-6 w-full max-w-lg rounded-lg text-start shadow-lg md:ml-12 md:mt-0 md:w-1/2">
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div>
+            <div className={"px-4"}>
               <label className="mb-2 block text-sm">Name</label>
               <Input
                 type="text"
@@ -109,7 +95,7 @@ export default function ContactUsSection() {
                 required
               />
             </div>
-            <div>
+            <div className={"px-4"}>
               <label className="mb-2 block text-sm">Email</label>
               <Input
                 type="email"
@@ -120,7 +106,7 @@ export default function ContactUsSection() {
                 required
               />
             </div>
-            <div>
+            <div className={"px-4"}>
               <label className="mb-2 block text-sm">Message</label>
               <Textarea
                 maxLength={255}
@@ -133,11 +119,21 @@ export default function ContactUsSection() {
               />
             </div>
             {/* Hide*/}
-            <div ref={turnstileRef} className="cf-turnstile"></div>
-
-            <Button className="w-full" type="submit" disabled={loading}>
-              {loading ? "Submitting..." : "Submit"}
-            </Button>
+            <div className="w-full pl-4 overflow-hidden">
+              <Turnstile className={""}
+                sitekey={appConfig.cfSiteKey}
+                         size={"normal"}
+                         style={{ width: "100%" }}
+                onVerify={(token) => {
+                  setCfToken(token);
+                }}
+              />
+            </div>
+            <div className="w-full px-4">
+              <Button className="w-full" type="submit" disabled={loading}>
+                {loading ? "Submitting..." : "Submit"}
+              </Button>
+            </div>
             {
               <p
                 className={
