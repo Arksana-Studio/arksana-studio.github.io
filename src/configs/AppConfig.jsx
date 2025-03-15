@@ -22,6 +22,6 @@ export const appConfig = {
   },
   logo: "/logo/arksana.png",
   googleScript: process.env.NEXT_PUBLIC_GOOGLE_SCRIPT,
-  cfSiteKey: process.env.NODE_ENV === "development" ? "1x00000000000000000000AA" : process.env.NEXT_PUBLIC_CF_SITE_KEY,
+  cfSiteKey: process.env.NEXT_PUBLIC_CF_SITE_KEY,
 }
 

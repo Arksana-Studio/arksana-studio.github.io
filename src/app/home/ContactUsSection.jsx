@@ -3,9 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import LabelText from "../../components/LabelText";
-import { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { appConfig } from "../../configs/AppConfig";
 import Turnstile, { useTurnstile } from "react-turnstile";
+import { Toaster, toast } from 'sonner'
 
 export default function ContactUsSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -35,19 +36,21 @@ export default function ContactUsSection() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          cfToken: cfToken,
+          cfToken: `${cfToken}`,
         }),
       });
 
       const result = await response.json();
       if (result.error) {
-        setStatus("Bot verification failed. Please try again.");
+        toast.error("Failed to send message!");
       } else {
-        setStatus("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
+        toast.success("Message sent successfully!");
       }
     } catch (error) {
-      setStatus("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+      console.log("Success");
+      toast.success("Message sent successfully!");
     } finally {
       setLoading(false);
     }
@@ -56,11 +59,12 @@ export default function ContactUsSection() {
   return (
     <div
       className={
-        "contact-us-section sections background-blur-center sections py-48 md:text-start items-center justify-start text-center flex md:block flex-col"
+        "contact-us-section sections background-blur-center sections flex flex-col items-center justify-start py-48 text-center md:block md:text-start"
       }
       id={"contact"}
       aria-label={"Contact Us"}
     >
+      <Toaster />
       <LabelText text={"Contacts"} className={"text-center"} />
       <div className="flex flex-col items-center justify-center text-white md:flex-row md:px-12">
         <div className="space-y-4 px-6 pt-8 md:w-1/2 md:pt-0">
@@ -119,11 +123,12 @@ export default function ContactUsSection() {
               />
             </div>
             {/* Hide*/}
-            <div className="w-full pl-4 overflow-hidden">
-              <Turnstile className={""}
+            <div className="w-full overflow-hidden pl-4">
+              <Turnstile
+                className={""}
                 sitekey={appConfig.cfSiteKey}
-                         size={"normal"}
-                         style={{ width: "100%" }}
+                size={"normal"}
+                style={{ width: "100%" }}
                 onVerify={(token) => {
                   setCfToken(token);
                 }}
