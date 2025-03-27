@@ -6,8 +6,8 @@ self.addEventListener("install", (event) => {
         "/",
         "/index.html",
         "/manifest.json",
-        "/icons/icon-192x192.png",
-        "/icons/icon-512x512.png"
+        "/favicon/android-chrome-192x192.png",
+        "/favicon/favicon.ico",
       ]);
     })
   );
