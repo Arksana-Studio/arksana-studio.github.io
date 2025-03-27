@@ -6,7 +6,8 @@ import LabelText from "../../components/LabelText";
 import React, { useState } from "react";
 import { appConfig } from "../../configs/AppConfig";
 import Turnstile, { useTurnstile } from "react-turnstile";
-import { Toaster, toast } from 'sonner'
+import { Toaster } from "../../components/ui/toaster";
+import { useToast } from "@/hooks/use-toast"
 
 export default function ContactUsSection() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -14,6 +15,7 @@ export default function ContactUsSection() {
   const [status, setStatus] = useState("");
   const [cfToken, setCfToken] = useState("");
   const turnstile = useTurnstile();
+  const { toast } = useToast();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

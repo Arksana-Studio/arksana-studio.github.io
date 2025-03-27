@@ -25,6 +25,9 @@ const eslintConfig = [
     rules: {
       "@next/next/no-img-element": "off"
     }
+  },
+  {
+    ignores: ["src/components/ui/**", "src/hooks/**"]
   }
 ];
 

@@ -21,6 +21,10 @@ const NavigationBar = (className) => {
   const onNavClick = (section) => () => {
     closeNav();
 
+    if (section === "home") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     if (section === "") {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
@@ -55,6 +59,7 @@ const NavigationBar = (className) => {
         <div className="card-glass mx-auto flex max-w-4xl flex-row items-center bg-gray-800 p-2 md:rounded-lg md:p-1">
           <div className={"flex flex-1 items-center gap-2"}>
             <img
+              onClick={onNavClick("")}
               src={appConfig.logo}
               alt="logo"
               className="h-12 w-12 p-1 md:ml-2 md:h-8 md:w-8"

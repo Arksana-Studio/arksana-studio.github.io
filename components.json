@@ -12,10 +12,19 @@
   },
   "aliases": {
     "components": "@/components",
+    "middleware": "@/middleware",
     "utils": "@/lib/utils",
     "ui": "@/components/ui",
     "lib": "@/lib",
-    "hooks": "@/hooks"
+    "hooks": "@/hooks",
+    "styles": "@/styles",
+    "public": "@/public",
+    "assets": "@/public/assets",
+    "images": "@/public/assets/images",
+    "icons": "@/public/assets/icons",
+    "fonts": "@/public/assets/fonts",
+    "locales": "@/locales",
+    "providers": "@/providers"
   },
   "iconLibrary": "lucide"
 }

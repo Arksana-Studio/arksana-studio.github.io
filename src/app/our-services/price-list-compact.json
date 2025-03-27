@@ -1,0 +1,58 @@
+{
+  "services": [
+    {
+      "name": "Personal Website",
+      "price": 400000,
+      "description": "A personal website service with responsive design and custom branding. One-time payment with domain name pricing ranging from 50k to 200k per year.",
+      "message": "I am a student or individual looking to showcase my work or portfolio online.",
+      "features": [
+        "Responsive Design",
+        "Custom Design & Branding",
+        "Intuitive Navigation & Site Architecture",
+        "SEO Optimization"
+      ]
+    },
+    {
+      "name": "Company Profile",
+      "price": 5000000,
+      "description": "A professional company profile website designed for businesses. One-time payment with an annual domain fee (200k-500k) per year and various feature-based add-ons.",
+      "message": "I am a business owner looking to establish an online presence for my company.",
+      "features": [
+        "Responsive Design",
+        "Custom Design & Branding",
+        "Intuitive Navigation & Site Architecture",
+        "SEO Optimization",
+        "Content Management System (CMS)",
+        "Automatic Contact Form Integration",
+        "Security Enhancements",
+        "Article/Post Management & Training"
+      ]
+    },
+    {
+      "name": "Mobile App",
+      "price": 7000000,
+      "description": "A mobile application development service for iOS and Android. Built for performance, user-friendly interfaces, and scalable architecture.",
+      "message": "I am a business owner looking to expand my reach and engage with customers through a mobile application.",
+      "features": [
+        "Custom UI/UX Design",
+        "Cross-Platform Development",
+        "Performance Optimization",
+        "API Integration",
+        "Push Notifications"
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "price": -1,
+      "description": "A fully customized solution for both web and mobile applications, tailored to meet unique business requirements.",
+      "message": "I am a business owner looking for a comprehensive digital solution to streamline operations and enhance customer engagement.",
+      "features": [
+        "Bespoke Design & Development",
+        "Responsive & Adaptive Layouts",
+        "Integrated Web & Mobile Features",
+        "Scalable Architecture",
+        "Advanced Security & Maintenance"
+      ]
+    }
+  ]
+}
